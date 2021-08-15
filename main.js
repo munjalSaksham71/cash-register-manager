@@ -25,9 +25,7 @@ const notesReturn = (remainingBalance) => {
 
 const clickHandler = () => {
   hideMessage();
-  if (billAmount.value >= 0) {
-    console.log(billAmount);
-    console.log(cashGiven);
+  if (Number(billAmount.value) >= 0) {
     if (Number(billAmount.value) < Number(cashGiven.value)) {
       const remainingBalance = cashGiven.value - billAmount.value;
       notesReturn(remainingBalance);
